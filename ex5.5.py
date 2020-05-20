@@ -8,9 +8,7 @@ with open('5.5.txt', 'w+') as f:
 with  open('5.5.txt', 'r') as f:
     my_list = f.read()
     my_list = my_list.split()
-    summat = 0
-    for i in my_list:
-        my_list[i] = int(my_list[i])
-        summat += my_list[i]
+    my_list= [int(x) for x in my_list]
+    s = sum(my_list)
     print(my_list)
-    print(summat)
+    print(s)
